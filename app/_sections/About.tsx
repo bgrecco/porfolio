@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Section from "../_components/Section";
 import Image from "next/image";
-import { footerLinks, pastExperienceLogos, skills } from "../_constants";
+import { footerLinks, pastExperienceLogos } from "../_constants";
 import Button from "../_components/Button";
 import { DownloadIcon } from "../_constants/icons";
 
@@ -91,41 +91,6 @@ export default function About() {
               priority={true}
               alt={"Profile headshot"}
             />
-          </div>
-        </div>
-        <div className="flex flex-col lg:text-left  space-y-12 w-full pb-24">
-          <p className="text-xl">Skills that I have to help you</p>
-          <div className="flex place-self-center">
-            <div className="relative left-1/2 flex lg:w-[26rem] w-[20rem] aspect-square border border-secondary rounded-full -translate-x-1/2 scale:75 md:scale-100">
-              <div className="flex lg:w-60 w-40 aspect-square m-auto border border-secondary rounded-full">
-                <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
-                  <Image
-                    src={"/profile.jpg"}
-                    className="relative rounded-full border-2 border-secondary-light leading-none group-hover:-rotate-2 transition duration-300"
-                    width={48}
-                    height={48}
-                    alt="skills center image"
-                  />
-                </div>
-              </div>
-
-              <ul>
-                {skills.map((app, index) => (
-                  <li
-                    key={app.id}
-                    className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom`}
-                    style={{ transform: `rotate(${index * 45}deg)` }}
-                  >
-                    <div
-                      className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] border border-secondary bg-background rounded-xl`}
-                      style={{ transform: `rotate(-${index * 45}deg)` }}
-                    >
-                      {app.icon}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </div>

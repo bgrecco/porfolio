@@ -11,12 +11,18 @@ export const navigation = [
   },
   {
     id: "1",
+    title: "Skills",
+    url: "#skills",
+    "aria-label": "Habilidades",
+  },
+  {
+    id: "2",
     title: "Projects",
     url: "#project",
     "aria-label": "Proyectos",
   },
   {
-    id: "2",
+    id: "3",
     title: "Contact",
     url: "#contact",
     "aria-label": "Contacto",
