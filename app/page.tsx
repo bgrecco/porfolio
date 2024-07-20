@@ -5,11 +5,11 @@ import Projects from "./_sections/Projects";
 
 export default function Home() {
   return (
-    <>
+    <div className="mr-2">
       <About />
       <Skills />
       <Projects />
       <Contact />
-    </>
+    </div>
   );
 }
