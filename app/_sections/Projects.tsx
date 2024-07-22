@@ -1,3 +1,4 @@
+import ProjectCard from "../_components/ProjectCard";
 import Section from "../_components/Section";
 import { CodeBracketIcon } from "@heroicons/react/24/outline";
 
@@ -31,6 +32,14 @@ export default function Projects() {
           <p className="max-w-screen-sm text-base lg:ml-0.5">
             This is what I have been working on
           </p>
+        </div>
+        <div className="flex flex-col lg:flex-row gap-2 relative z-[1] max-w-screen-sm">
+          <ProjectCard
+            title={"Framed clone"}
+            description={
+              "is a small project designed to replicate the web game where players guess movies from frames, posters, and trivia."
+            }
+          ></ProjectCard>
         </div>
       </div>
     </Section>
