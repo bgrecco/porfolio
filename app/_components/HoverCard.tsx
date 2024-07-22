@@ -9,8 +9,8 @@ type Props = {
 };
 
 const calc = (x: number, y: number): [number, number, number] => [
-  -(y - window.innerHeight / 2) / 360,
-  (x - window.innerWidth / 2) / 240,
+  -(y - window.innerHeight / 2) / 100,
+  (x - window.innerWidth / 2) / 100,
   1.02,
 ];
 
@@ -24,9 +24,9 @@ const HoverCard: React.FC<Props> = ({
   left,
 }) => {
   const [hovered, setIsHovered] = useState(false);
-  const [springProps, set] = useSpring(() => ({
+  const [springProps, setSpringProps] = useSpring(() => ({
     xys: [0, 0, 1],
-    config: { mass: 5, tension: 6000, friction: 1000 },
+    config: { mass: 5, tension: 350, friction: 40 },
   }));
 
   const [cursorCoords, setCursorCoords] = useState({ x: 0, y: 0 });
@@ -52,7 +52,7 @@ const HoverCard: React.FC<Props> = ({
 
   const translateX =
     typeof window !== "undefined"
-      ? calcTranslate(cursorCoords.x, window.innerWidth, 600)
+      ? calcTranslate(cursorCoords.x, window.innerWidth, 1400)
       : 0;
   const translateY =
     typeof window !== "undefined"
@@ -61,12 +61,12 @@ const HoverCard: React.FC<Props> = ({
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     const { clientX: x, clientY: y } = event;
-    set({ xys: calc(x, y) });
+    setSpringProps({ xys: calc(x, y) });
     setIsHovered(true);
   };
 
   const handleMouseLeave = () => {
-    set({ xys: [0, 0, 1] });
+    setSpringProps({ xys: [0, 0, 1] });
     setIsHovered(false);
   };
 
