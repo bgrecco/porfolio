@@ -14,10 +14,6 @@ export default function ProjectCard({
   children,
 }: ProjectCardProps) {
   const [hovered, setHovered] = React.useState<boolean>(false);
-  const [showPy, setShowPy] = React.useState<boolean>(false);
-  const [showJs, setShowJs] = React.useState<boolean>(false);
-  const [showGo, setShowGo] = React.useState<boolean>(false);
-  const [count, setCount] = React.useState<number>(0);
 
   return (
     <HoverCard backgroundColor="bg-secondary-light" direction="" left="0">
