@@ -30,6 +30,8 @@ const HoverCard: React.FC<Props> = ({
   }));
 
   const [cursorCoords, setCursorCoords] = useState({ x: 0, y: 0 });
+  const [translateX, setTranslateX] = useState(0);
+  const [translateY, setTranslateY] = useState(0);
 
   useEffect(() => {
     const handleMousePosition = (event: MouseEvent) => {
@@ -39,25 +41,28 @@ const HoverCard: React.FC<Props> = ({
 
     window.addEventListener("mousemove", handleMousePosition);
 
+    setTranslateX(
+      calcTranslate(window.innerWidth / 2, window.innerWidth, 1400)
+    );
+    setTranslateY(
+      calcTranslate(window.innerHeight / 2, window.innerHeight, 600)
+    );
+
     return () => {
       window.removeEventListener("mousemove", handleMousePosition);
     };
   }, []);
+
+  useEffect(() => {
+    setTranslateX(calcTranslate(cursorCoords.x, window.innerWidth, 1400));
+    setTranslateY(calcTranslate(cursorCoords.y, window.innerHeight, 600));
+  }, [cursorCoords]);
 
   const calcTranslate = (
     coordinate: number,
     containerSize: number,
     itemSize: number
   ) => coordinate - itemSize / 2;
-
-  const translateX =
-    typeof window !== "undefined"
-      ? calcTranslate(cursorCoords.x, window.innerWidth, 1400)
-      : 0;
-  const translateY =
-    typeof window !== "undefined"
-      ? calcTranslate(cursorCoords.y, window.innerHeight, 600)
-      : 0;
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     const { clientX: x, clientY: y } = event;
