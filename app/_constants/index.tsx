@@ -230,3 +230,18 @@ export const skills = [
     height: 32,
   },
 ];
+
+export const contactInfo = [
+  {
+    id: 1,
+    label: "LinkedIn",
+    text: "/bruno-grecco-25b648210/",
+    icon: LinkedInIcon(),
+  },
+  {
+    id: 2,
+    label: "Email",
+    text: "bruno.grecco.a@gmail.com",
+    icon: <EnvelopeIcon className="size-6" />,
+  },
+];

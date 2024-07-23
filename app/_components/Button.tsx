@@ -1,6 +1,6 @@
 export interface ButtonProps {
   variant: "text" | "contained" | "outlined";
-  children: JSX.Element;
+  children: JSX.Element | string;
 }
 
 export default function Button({ variant, children }: ButtonProps) {

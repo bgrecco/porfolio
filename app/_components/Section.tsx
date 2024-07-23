@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface SectionProps {
-  className?: any;
+  className?: string;
   id: string;
   firstSection: boolean;
   lastSection: boolean;
