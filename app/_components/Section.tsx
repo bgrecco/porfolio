@@ -22,6 +22,7 @@ const Section = (props: SectionProps) => {
       relative 
       flex
       w-full
+      scroll-mt-28
       ${className || ""}`}
     >
       <div className="col-1 w-12 flex flex-col items-center">
