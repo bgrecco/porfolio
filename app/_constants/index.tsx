@@ -18,7 +18,7 @@ export const navigation = [
   {
     id: "2",
     title: "Projects",
-    url: "#project",
+    url: "#projects",
     "aria-label": "Proyectos",
   },
   {
@@ -116,6 +116,7 @@ export const skills = [
     ),
     width: 40,
     height: 40,
+    experience: "5 years of experience",
   },
   {
     id: "1",
@@ -132,6 +133,7 @@ export const skills = [
     ),
     width: 34,
     height: 36,
+    experience: "3 years of experience",
   },
   {
     id: "2",
@@ -148,6 +150,7 @@ export const skills = [
     ),
     width: 36,
     height: 28,
+    experience: "3 years of experience",
   },
   {
     id: "3",
@@ -164,6 +167,7 @@ export const skills = [
     ),
     width: 34,
     height: 35,
+    experience: "1 year of experience",
   },
   {
     id: "4",
@@ -180,6 +184,7 @@ export const skills = [
     ),
     width: 34,
     height: 34,
+    experience: "4 years of experience",
   },
   {
     id: "5",
@@ -196,6 +201,7 @@ export const skills = [
     ),
     width: 34,
     height: 34,
+    experience: "4 years of experience",
   },
   {
     id: "6",
@@ -212,6 +218,7 @@ export const skills = [
     ),
     width: 26,
     height: 34,
+    experience: "6 months of experience",
   },
   {
     id: "7",
@@ -228,6 +235,7 @@ export const skills = [
     ),
     width: 38,
     height: 32,
+    experience: "1 year of experience",
   },
 ];
 
